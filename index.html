@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev.Finance$</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+
+  </head>
+  <body>
+    <!---HEADER-->
+    <header>
+      <div class="contentHeader">
+        <i style="color: white; margin-right: 10px;" data-feather="dollar-sign"></i>
+        <h1 style="color: white;">Conversor Dolar - Real</h1>
+      </div>
+    </header>
+
+    <!---MAIN-->
+    <main class="container">
+      <section id="balance">
+        <h2 class="sr-only">Balanço</h2>
+
+        <div class="card">
+          <h3>
+            <span>Taxa de Conversão</span>
+            <img src="./assets/income.svg" alt="image de entradas" />
+          </h3>
+          
+          <input type="number" id="taxaConversao" name="qtdTax" placeholder="Taxa de Conversão">
+        </div>
+
+        <div class="card">
+          <h3>
+            <span>Dolar</span>
+            <i style="width: 32px; height: 32px;" data-feather="dollar-sign"></i>
+          </h3>
+          
+          <input type="number" id="qtdDolar" name="qtdTotalDolar" placeholder="Dolar">
+        </div>
+
+        <div class="card total">
+          <h3>
+            <span>Total em Reais</span>
+            <img src="./assets/total.svg" alt="image de Total" />
+          </h3>
+          
+          <input type="number" id="qtdReal" name="qtdTotalReal" placeholder="Reais">
+        </div>
+      </section>
+
+      <div class="buttonsFunction">
+        <button onclick="calcularDolReal()" class="calculate" id="calculateDolReal">Calcular Dolar para Real</button>
+      <button onclick="calcularRealDolar()" class="calculate" id="calculateRealDol">Calcular Real para Dolar</button>
+      <button onclick="limparDados()" id="Limpar">Limpar dados</button> 
+      </div> 
+      <button onclick="confirmButtonTax()" id="confirmTax">CONFIRMAR TAXA DE CONVERSÃO</button>
+
+    </main>
+
+
+
+    <!---FOOTER-->
+    <footer>
+      <p>
+        Projeto da cadeira de Programação Web <br />Made with &lt&gt; by
+        <a href="https://github.com/rafaelpdemelo/">@rafaelpdemelo</a>
+      </p>
+    </footer>
+
+
+    <script src="main2.js"></script>
+<script>
+  feather.replace()
+</script>
+  </body>
+</html>
